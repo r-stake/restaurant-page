@@ -5,8 +5,10 @@
 }
 
 #content {
-  height: 100vh;
-  background: url(../img/restaurant-custom.jpg) fixed;
+  min-height: 100vh;
+  background: url(../img/restaurant2-custom.jpg) fixed;
+  display: flex;
+  flex-direction: column;
 }
 
 #content header {
@@ -26,7 +28,8 @@
 main {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  align-items: center;
+  flex: 1;
 }
 
 main div {
@@ -37,6 +40,20 @@ main div {
 
 main p {
   color: wheat;
-  font-size: 1.5rem;
+  font-size: 1.75vw;
   margin: 0;
+}
+
+footer {
+  background-color: rgb(0, 0, 0, 0.8);
+  color: wheat;
+  text-align: center;
+}
+
+footer a:visited {
+  color: wheat;
+}
+
+footer p {
+  margin: 0.5rem;
 }
