@@ -1,1 +1,4 @@
-console.log('Hello');
+import { renderHome } from './home.js';
+
+
+renderHome();
