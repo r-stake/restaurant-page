@@ -1,6 +1,8 @@
+import {createReference, createElement, appendElement, addTextContent, addInnerHTML} from './helper_functions.js';
+
 const home = {
   header: {
-    name: "Autumn lights",
+    name: "Autumn Lights",
   },
   main: {
     description: "Discover Autumn Lights, a haven of tranquility. With its softly lit, rustic interior and a serene ambiance that perfectly captures the essence of autumn, our restaurant offers a respite from the everyday hustle. Indulge in our thoughtfully curated menu, artfully prepared to evoke the flavors of the season, while basking in the soothing melodies that add an extra layer of relaxation to your dining experience. At Autumn Lights, let the gentle atmosphere and the delightful cuisine guide you into a moment of peaceful bliss and contentment."
@@ -19,27 +21,6 @@ const home = {
       return `© ${currentYear} Autumn Lights. All rights reserved.`
     },
   },
-}
-
-function createReference(reference) {
-  return document.querySelector(reference);
-}
-
-function createElement(element) {
-  const newElement = document.createElement(element);
-  return newElement;
-}
-
-function appendElement(parentElement, childElement) {
-  parentElement.appendChild(childElement);
-}
-
-function addTextContent(element, content) {
-  element.textContent = content;
-}
-
-function addInnerHTML(element, content) {
-  element.innerHTML = content;
 }
 
 function renderHome() {
