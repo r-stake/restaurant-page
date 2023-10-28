@@ -1,4 +1,4 @@
-import { createElement, appendElement, addTextContent } from './helper_functions.js';
+import { addClass, createReference, createElement, appendElement, addTextContent } from './helper_functions.js';
 import createHeader from './header.js';
 import createFooter from './footer.js';
 
@@ -9,14 +9,17 @@ const home = {
 export default function renderHome() {
   // Create header
   createHeader();
+  const homeNav = createReference("#home");
+  addClass(homeNav, "selected");
 
-  // Create home main
+  // Create home
   const main = createElement("main");
   const div = createElement("div");
   const paraMain = createElement("p");
 
   appendElement(content, main);
   appendElement(main, div);
+  addClass(div, "home");
   appendElement(div, paraMain);
   addTextContent(paraMain, home.description);
 

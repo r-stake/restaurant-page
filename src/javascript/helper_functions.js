@@ -18,3 +18,7 @@ export function addTextContent(element, content) {
 export function addInnerHTML(element, content) {
   element.innerHTML = content;
 }
+
+export function addClass(element, newClass) {
+  element.classList.add(newClass)
+}
