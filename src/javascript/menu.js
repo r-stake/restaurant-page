@@ -201,6 +201,57 @@ export const menu = {
   ]
 }
 
+function createCard() {
+  const divMenu = createReference(".menu");
+  console.log(divMenu);
+  const card = createElement("div");
+  appendElement(divMenu, card);
+  addClass(card, "dish");
+
+  const h3Card = createElement("h3");
+  appendElement(card, h3Card);
+  addClass(h3Card, "name");
+
+  const ingredients = createElement("p");
+  const price = createElement("p");
+  appendElement(card, ingredients);
+  appendElement(card, price);
+  addClass(ingredients, "ingredients");
+  addClass(price, "price");
+}
+
+function populateCard(object) {
+  const name = createReference(".name:empty");
+  const ingredients = createReference(".ingredients:empty");
+  const price = createReference(".price:empty");
+
+  addTextContent(name, object.name)
+  addTextContent(ingredients, object.ingredients);
+  addTextContent(price, object.price);
+}
+
+function createMenuSectionName(name) {
+  if (name[0] === name[0].toLowerCase()) {
+    name = name[0].toUpperCase() + name.slice(1);
+  }
+  const divMenu = createReference(".menu");
+  const menuSectionName = createElement("h2");
+  appendElement(divMenu, menuSectionName);
+  addTextContent(menuSectionName, name);
+}
+
+function createMenu() {
+  for (const key in menu) {
+    if (menu.hasOwnProperty(key)) {
+      createMenuSectionName(key);
+      menu[key].forEach(element => {
+        createCard();
+        populateCard(element);
+      });
+    }
+  }
+}
+
 export default function renderMenu() {
   // Create header
   createHeader();
@@ -209,11 +260,13 @@ export default function renderMenu() {
 
   // Create menu
   const main = createElement("main");
-  const div = createElement("div");
+  const divMenu = createElement("div");
 
   appendElement(content, main);
-  appendElement(main, div);
-  addClass(div, "menu");
+  appendElement(main, divMenu);
+  addClass(divMenu, "menu");
+
+  createMenu();
 
   // Create footer
   createFooter();

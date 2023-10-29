@@ -62,14 +62,27 @@ main {
 
 main div {
   background-color: rgb(0, 0, 0, 0.8);
-  width: 50%;
+  width: 70%;
   padding: 1.5rem;
+  color: wheat;
 }
 
-main p {
+main .home p {
   color: wheat;
   font-size: 1.75vw;
   margin: 0;
+}
+
+#content main .menu {
+  margin: 2rem 0;
+}
+
+#content main .menu h2 {
+  text-align: center;
+}
+
+#content main .menu div {
+  margin: 0 auto 2rem;
 }
 
 footer {

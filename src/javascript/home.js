@@ -14,12 +14,12 @@ export default function renderHome() {
 
   // Create home
   const main = createElement("main");
-  const div = createElement("div");
+  const divHome = createElement("div");
 
   appendElement(content, main);
-  appendElement(main, div);
-  addClass(div, "home");
-  
+  appendElement(main, divHome);
+  addClass(divHome, "home");
+
   const paraMain = createElement("p");
   appendElement(div, paraMain);
   addTextContent(paraMain, home.description);
