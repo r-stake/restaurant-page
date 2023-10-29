@@ -1,4 +1,4 @@
-import { addClass, createReference, createElement, appendElement, addTextContent } from './helper_functions.js';
+import { createReference, createElement, appendElement, addTextContent, addClass } from './helper_functions.js';
 import createHeader from './header.js';
 import createFooter from './footer.js';
 
@@ -15,11 +15,12 @@ export default function renderHome() {
   // Create home
   const main = createElement("main");
   const div = createElement("div");
-  const paraMain = createElement("p");
 
   appendElement(content, main);
   appendElement(main, div);
   addClass(div, "home");
+  
+  const paraMain = createElement("p");
   appendElement(div, paraMain);
   addTextContent(paraMain, home.description);
 
