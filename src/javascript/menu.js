@@ -1,6 +1,5 @@
-import createHeader from "./header";
-import createFooter from "./footer";
 import { createReference, createElement, appendElement, addTextContent, addClass } from "./helper_functions";
+import { createMainSection } from "./helper_functions";
 
 export const menu = {
   appetizers: [
@@ -208,7 +207,6 @@ export const menu = {
 
 function createCard() {
   const divMenu = createReference(".menu");
-  console.log(divMenu);
   const card = createElement("div");
   appendElement(divMenu, card);
   addClass(card, "dish");
@@ -258,21 +256,6 @@ function createMenu() {
 }
 
 export default function renderMenu() {
-  // Create header
-  createHeader();
-  const menuNav = createReference("#menu");
-  addClass(menuNav, "selected");
-
-  // Create menu
-  const main = createElement("main");
-  const divMenu = createElement("div");
-
-  appendElement(content, main);
-  appendElement(main, divMenu);
-  addClass(divMenu, "menu");
-
+  createMainSection("menu");
   createMenu();
-
-  // Create footer
-  createFooter();
 }

@@ -15,7 +15,7 @@ const footerElements = {
   }
 }
 
-export default function createFooter() {
+export default function renderFooter() {
   const footer = createElement("footer");
   const paraFootRef = createElement("p");
   const paraFootCopyright = createElement("p");

@@ -7,7 +7,7 @@ const headerElements = {
   ]
 }
 
-export default function createHeader() {
+export default function renderHeader() {
   const content = createReference("#content");
   const header = createElement("header");
   const h1 = createElement("h1");

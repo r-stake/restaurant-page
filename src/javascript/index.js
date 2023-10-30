@@ -1,8 +1,3 @@
-import renderHome from './home.js';
-import renderMenu from './menu.js';
-import renderContacts from './contacts.js';
-import { menu } from './menu.js';
+import { renderPage } from './helper_functions.js';
 
-// renderHome();
-// renderMenu();
-renderContacts();
+renderPage();

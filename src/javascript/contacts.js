@@ -1,6 +1,5 @@
-import createHeader from "./header";
-import createFooter from "./footer";
 import { createReference, createElement, appendElement, addTextContent, addClass, addInnerHTML } from "./helper_functions";
+import { createMainSection } from "./helper_functions";
 
 const embedMap = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7964.12096926262!2d22.683656287526496!3d55.4659877061418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slt!4v1698664047982!5m2!1sen!2slt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
 
@@ -88,21 +87,6 @@ function createContactUsSection(reference) {
 }
 
 export default function renderContacts() {
-  // Create header
-  createHeader();
-  const contactsNav = createReference("#contacts");
-  addClass(contactsNav, "selected");
-
-  // Create contacts section
-  const main = createElement("main");
-  const divContacts = createElement("div");
-
-  appendElement(content, main);
-  appendElement(main, divContacts);
-  addClass(divContacts, "contacts");
-
+  createMainSection("contacts");
   createContactsSection(divContacts);
-
-  // Create footer
-  createFooter();
 }
