@@ -21,7 +21,7 @@ export default function renderHome() {
   addClass(divHome, "home");
 
   const paraMain = createElement("p");
-  appendElement(div, paraMain);
+  appendElement(divHome, paraMain);
   addTextContent(paraMain, home.description);
 
   // Create footer

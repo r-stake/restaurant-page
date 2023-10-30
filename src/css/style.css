@@ -60,11 +60,12 @@ main {
   flex: 1;
 }
 
-main div {
+main > div {
   background-color: rgb(0, 0, 0, 0.8);
   width: 70%;
   padding: 1.5rem;
   color: wheat;
+  margin: 2rem 0;
 }
 
 main .home p {
@@ -73,16 +74,21 @@ main .home p {
   margin: 0;
 }
 
-#content main .menu {
-  margin: 2rem 0;
-}
-
 #content main .menu h2 {
   text-align: center;
 }
 
-#content main .menu div {
-  margin: 0 auto 2rem;
+#content main .contacts > div {
+  margin-bottom: 3rem;
+}
+
+#content main .contacts {
+  text-align: center;
+}
+
+#content main .contacts a {
+  color: wheat;
+  text-decoration: none;
 }
 
 footer {
@@ -97,4 +103,8 @@ footer a:visited {
 
 footer p {
   margin: 0.5rem;
+}
+
+iframe {
+  width: 100%;
 }
