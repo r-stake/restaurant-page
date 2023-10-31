@@ -71,6 +71,8 @@ function clickHandler() {
 export function renderPage() {
   renderHeader();
   renderHome();
+  const initialNav = document.querySelector("#home");
+  initialNav.classList.add("selected");
   renderFooter();
 
   createEventListeners();

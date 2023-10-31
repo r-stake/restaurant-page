@@ -88,5 +88,6 @@ function createContactUsSection(reference) {
 
 export default function renderContacts() {
   createMainSection("contacts");
+  const divContacts = createReference(".contacts");
   createContactsSection(divContacts);
 }
