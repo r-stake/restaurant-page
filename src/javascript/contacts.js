@@ -8,8 +8,8 @@ const contactInfo = {
   email: "info@autumnlights.com",
   phone: '802 211 258 6698',
   'working hours': [
-    "MON - FRI, 9 AM - 6 PM",
-    "SAT - SUN, 9 AM - 4 PM",
+    "MON - FRI, 9 AM - 10 PM",
+    "SAT - SUN, 9 AM - 11 PM",
   ]
 }
 
